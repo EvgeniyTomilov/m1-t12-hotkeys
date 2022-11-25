@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class PetrolCalculatorClasses {
-    public void calculate() {
+public class PetrolCalculator {
+    public void calculateLoopLoop() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите количество действий => ");
         int iterationsCount = scanner.nextInt();
@@ -11,17 +11,19 @@ public class PetrolCalculatorClasses {
             System.out.print("Введите количество литров => ");
             double razmer = scanner.nextDouble();
             if (petrolType == 1) {
-                double price = new Ai92Calculator().calculate(razmer);
+                double price = new Ai92Calculator().calculateLoop(razmer);
                 System.out.println("Стоимость " + razmer + " литров АИ-92 = " + price + "₽");
             } else if (petrolType == 2) {
-                double price = new Ai95Calculator().calculate(razmer);
+                double price = new Ai95Calculator().calculateLoop(razmer);
                 System.out.println("Стоимость " + razmer + " литров АИ-95 = " + price + "₽");
             }
         }
     }
 
     public static void main(String[] args) {
-		System.out.println("Введённые аргументы:" + args);
-        new PetrolCalculatorClasses().calculate();
+	/*	System.out.println("Введённые аргументы:" + args);
+
+	 */
+        new PetrolCalculator().calculateLoop();
     }
 }
